@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Define the navItems array
-  const navItems = ['Home', 'About Us', 'Services', 'Pricing'];
+  const navItems = ['Home', 'About Us', 'Services',];
 
   return (
     <div className="flex flex-col bg-white overflow-x-hidden"> {/* Added overflow-x-hidden */}

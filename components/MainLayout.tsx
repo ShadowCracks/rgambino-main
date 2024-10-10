@@ -5,10 +5,11 @@ import Aboutus from "./Aboutus";
 import Services from "./Services";
 import Testimonial from "./Testimonial";
 import Partners from "./Partners";
-import Pricing from "./Pricing";
+//import Pricing from "./Pricing";
 import CallToAction from "./CallToAction";
 import Footer from "./Footer";
 import ServicesSection from "./Services/ServicesSection";
+//import ServicesSection from "./home/ServicesSection";
 
 const MainLayout: React.FC = () => {
   // Define the navItems array
