@@ -12,7 +12,7 @@ import ServicesSection from "./home/ServicesSection";
 
 const MainLayout: React.FC = () => {
   // Define the navItems array
-  const navItems = ['Home', 'About Us', 'Services', 'Pricing'];
+  const navItems = ['Home', 'About Us', 'Services',];
 
   return (
     <div className="flex flex-col bg-white">

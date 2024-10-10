@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 function Booking() {
   // Define navItems
-  const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
+  const navItems = ['Home', 'About Us', 'Services', 'Pricing'];
 
   return (
     <div>

@@ -315,21 +315,17 @@ const BookingForm: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="overflow-hidden gap-2 self-stretch px-5 py-3 mt-7 text-base font-medium text-white bg-blue-400 rounded-[40px] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]"
+              className={`transform transition-transform duration-500 ${message && !loading ? "animate-success" : ""} bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded`}
             >
-              {loading ? "Submitting..." : "Submit"}
+              {loading ? "Submitting..." : message ? "Submitted!" : "Submit"}
             </button>
+
+
           </form>
         </div>
 
         {/* Image Section */}
-        <div className="flex justify-center items-center">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8d3c7def21e0693d44a2967ee5135f54c88f7cb1a0061ea906b14905f5a7e0d?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
-            alt="Auto Detailing"
-            className="object-contain h-full w-96" // Set a fixed width for the image
-          />
-        </div>
+
       </section>
     </main>
   );
