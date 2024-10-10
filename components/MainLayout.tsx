@@ -8,7 +8,7 @@ import Partners from "./Partners";
 import Pricing from "./Pricing";
 import CallToAction from "./CallToAction";
 import Footer from "./Footer";
-import ServicesSection from "./home/ServicesSection";
+import ServicesSection from "./Services/ServicesSection";
 
 const MainLayout: React.FC = () => {
   // Define the navItems array
@@ -24,7 +24,7 @@ const MainLayout: React.FC = () => {
         <Services />
         <Testimonial />
         <Partners />
-        <Pricing />
+        <ServicesSection />
         <CallToAction />
       </main>
       <Footer />
