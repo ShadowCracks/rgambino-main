@@ -27,7 +27,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews }) => {
             </div>
           </div>
           <p className="mt-2.5 text-sm leading-6 text-zinc-500 w-[620px] max-md:max-w-full">
-            "{review.content}"
+            {review.content}
           </p>
           <div className="flex gap-2.5 mt-4 text-sm leading-loose whitespace-nowrap text-zinc-500">
             <img
