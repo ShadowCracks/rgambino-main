@@ -1,0 +1,103 @@
+import React from "react";
+import Header from "./Header";
+import UploadForm from "./UploadForm";
+import ImageUpload from "./ImageUpload";
+import Footer from "./Footer";
+
+const PortfolioUpload: React.FC = () => {
+  const headerLinks = ["About", "Services", "Pricing", "Blog"];
+  const footerLinks = [
+    {
+      title: "Company",
+      items: [
+        "About Us",
+        "Our Services",
+        "Pricing Plan",
+        "Work with Us",
+        "Automotive Blog",
+      ],
+    },
+    {
+      title: "Support",
+      items: [
+        "Service FAQ",
+        "User Policy",
+        "Privacy Policy",
+        "Members Policy",
+        "Customer Support",
+      ],
+    },
+    {
+      title: "Contact",
+      items: [
+        "Phone Number",
+        "Email Address",
+        "Our Locations",
+        "Social Media",
+        "Message Form",
+      ],
+    },
+  ];
+
+  return (
+    <div className="flex overflow-hidden flex-col bg-white">
+      <Header links={headerLinks} />
+      <main className="self-center mt-9 w-full max-w-screen-xl max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col">
+          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+            <UploadForm />
+          </div>
+          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+            <ImageUpload />
+          </div>
+        </div>
+      </main>
+      <section className="pl-20 mt-32 w-full bg-neutral-900 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col">
+          <div className="flex flex-col w-[31%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col items-start self-stretch my-auto w-full font-bold max-md:mt-10">
+              <h2 className="text-5xl leading-10 text-stone-50">
+                What we are <br /> Doing
+              </h2>
+              <div className="flex flex-col items-start self-stretch pl-2 mt-8 text-sm leading-6 text-neutral-400">
+                <div className="shrink-0 border-blue-400 border-solid border-[3px] h-[3px] w-[132px]" />
+                <p className="self-stretch mt-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna enim,
+                  quis nostrud laboris.
+                </p>
+                <ul className="mt-10">
+                  <li className="mt-1.5">
+                    Lorem ipsum dolor sit amet, consectetu
+                  </li>
+                  <li className="mt-1.5">Lorem ipsum dolor</li>
+                  <li className="mt-1.5">Lorem ipsum dolor sit</li>
+                </ul>
+              </div>
+              
+              <div className="flex gap-4 mt-11 w-full text-base text-white max-md:mt-10">
+                <button className="self-stretch px-8 py-2.5 bg-blue-400 rounded-[100px] max-md:px-5">
+                  See More
+                </button>
+                <button className="self-stretch px-8 py-2.5 border border-blue-400 border-solid rounded-[100px] max-md:px-5">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col ml-5 w-[69%] max-md:ml-0 max-md:w-full">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b7177ee7be56471d98d61c3f7daed83b05924e2464a158d3d5e1a9b11ac208d?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+              alt="What we are doing illustration"
+              className="object-contain grow w-full aspect-[1.14] max-md:mt-10 max-md:max-w-full"
+            />
+          </div>
+        </div>
+      </section>
+      <Footer links={footerLinks} />
+    </div>
+  );
+};
+
+export default PortfolioUpload;
