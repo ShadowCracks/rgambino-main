@@ -1,11 +1,11 @@
 
 import React from "react";
-import Header from "./Header";
+
 import Hero from "./Hero";
 import ServiceDetails from "./ServiceDetails";
 import ReviewSection from "./ReviewSection";
 import WhatWeAreDoing from "./WhatWeAreDoing";
-import Footer from "./Footer";
+
 
 const ServiceDetailsPage: React.FC = () => {
   const reviews = [
@@ -66,7 +66,6 @@ const ServiceDetailsPage: React.FC = () => {
 
   return (
     <div className="flex overflow-hidden flex-col bg-white">
-      <Header logoSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/0c4bc369c732b4bf6c2901ab1bca691d6d2e06d1de98a4dfca45c66314e542b8?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11" />
       <Hero
         title="Services Details"
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has"
@@ -89,12 +88,6 @@ const ServiceDetailsPage: React.FC = () => {
         ]}
         expertName="Alex Brown"
         expertImageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/1b43a5a1ebb8143b00bb43d49e646eb05ae6f5cc13e3972e80d81d457737a92e?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
-      />
-      <Footer
-        description="We make sure to give your car the pempering it deserves in BubBlast."
-        companyLinks={footerLinks.companyLinks}
-        supportLinks={footerLinks.supportLinks}
-        contactLinks={footerLinks.contactLinks}
       />
     </div>
   );
