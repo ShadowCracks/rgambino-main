@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import UploadForm from "./UploadForm";
-import ImageUpload from "./ImageUpload";
 import Footer from "./Footer";
 
 const PortfolioUpload: React.FC = () => {
@@ -46,9 +45,6 @@ const PortfolioUpload: React.FC = () => {
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <UploadForm />
-          </div>
-          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <ImageUpload />
           </div>
         </div>
       </main>
