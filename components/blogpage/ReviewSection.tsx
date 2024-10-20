@@ -16,7 +16,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews }) => {
   return (
     <section className="mt-7">
       <h3 className="text-xl font-semibold leading-10 text-zinc-800">
-        Reviews :
+        Reviews 
       </h3>
       {reviews.map((review, index) => (
         <div key={index}>
