@@ -3,7 +3,7 @@ import PortfolioGrid from "./PortfolioGrid";
 import { supabase } from "../../lib/supabaseclient"; // Adjust based on where you initialize Supabase
 
 interface PortfolioItem {
-  id: number;
+  id: string;
   image: string;
   category: string;
   title: string;
