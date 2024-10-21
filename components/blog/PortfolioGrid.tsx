@@ -2,7 +2,7 @@ import React from "react";
 import PortfolioItem from "./PortfolioItem";
 
 interface PortfolioItemProps {
-  id: number;
+  id: string;
   image: string;
   category: string;
   title: string;
