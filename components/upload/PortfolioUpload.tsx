@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import UploadForm from "./UploadForm";
 import Footer from "./Footer";
+import Layout from "../About/Layout";
 
 const PortfolioUpload: React.FC = () => {
   const headerLinks = ["About", "Services", "Pricing", "Blog"];
@@ -40,7 +41,7 @@ const PortfolioUpload: React.FC = () => {
 
   return (
     <div className="flex overflow-hidden flex-col bg-white">
-      <Header links={headerLinks} />
+      <Layout>
       <main className="self-center mt-9 w-full max-w-screen-xl max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
@@ -91,7 +92,7 @@ const PortfolioUpload: React.FC = () => {
           </div>
         </div>
       </section>
-      <Footer links={footerLinks} />
+      </Layout>
     </div>
   );
 };
