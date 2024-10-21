@@ -1,16 +1,13 @@
-import React from 'react';
-import CarServices from '../components/Services/CarServices';
-import Layout from '../components/About/Layout';
-import Hero from '../components/Services/Hero';
+import React from 'react'
+import PricingPage from '../components/Price/PricingPage'
 
-const Services: React.FC = () => {
+function Pricing() {
   return (
-      <Layout>
-        <Hero />
-        < CarServices />
-      </Layout>
-    
-  );
-};
+    <div>
+      <PricingPage />
+    </div>
+  )
+}
 
-export default Services;
+export default Pricing
+
