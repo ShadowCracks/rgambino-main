@@ -1,43 +1,8 @@
 import React from "react";
-import Header from "./Header";
 import UploadForm from "./UploadForm";
-import Footer from "./Footer";
 import Layout from "../About/Layout";
 
 const PortfolioUpload: React.FC = () => {
-  const headerLinks = ["About", "Services", "Pricing", "Blog"];
-  const footerLinks = [
-    {
-      title: "Company",
-      items: [
-        "About Us",
-        "Our Services",
-        "Pricing Plan",
-        "Work with Us",
-        "Automotive Blog",
-      ],
-    },
-    {
-      title: "Support",
-      items: [
-        "Service FAQ",
-        "User Policy",
-        "Privacy Policy",
-        "Members Policy",
-        "Customer Support",
-      ],
-    },
-    {
-      title: "Contact",
-      items: [
-        "Phone Number",
-        "Email Address",
-        "Our Locations",
-        "Social Media",
-        "Message Form",
-      ],
-    },
-  ];
 
   return (
     <div className="flex overflow-hidden flex-col bg-white">
