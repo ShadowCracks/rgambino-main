@@ -24,7 +24,6 @@ const BlogPostPage: React.FC<BlogPostProps> = ({ post }) => {
         title={post.title}
         description={post.description}
         imageSrc={post.image_url}
-        features={post.features}
       />
     </div>
   );
