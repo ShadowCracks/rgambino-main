@@ -1,7 +1,7 @@
 import React from 'react'
 import App from '../components/blog/App'
 
-function blog () {
+function Blog () {
   return (
     <div>
       <App />
@@ -9,4 +9,4 @@ function blog () {
   )
 }
 
-export default blog
+export default Blog
