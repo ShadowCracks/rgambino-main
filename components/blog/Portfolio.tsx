@@ -58,12 +58,10 @@ const Portfolio: React.FC = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <section className="flex flex-col px-20 mt-9 w-full max-md:px-5 max-md:max-w-full">
-      <h2 className="self-start text-4xl font-semibold leading-none text-zinc-800">
-        Blog
-      </h2>
+    <section className="relative flex justify-center items-center w-full bg-gray-100 max-md:mt-0">
       <PortfolioGrid items={filteredItems} />
     </section>
+
   );
 };
 

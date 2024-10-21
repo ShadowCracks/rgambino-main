@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PortfolioItem from "./PortfolioItem";
 import { supabase } from "../../lib/supabaseclient"; // Ensure the Supabase client is imported
+import { useRouter } from "next/router"; // Import useRouter
 
 interface PortfolioData {
   id: number;
@@ -14,14 +15,16 @@ interface PortfolioData {
 const PortfolioSection: React.FC = () => {
   const [portfolioData, setPortfolioData] = useState<PortfolioData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [uploading, setUploading] = useState<boolean>(false); // Track uploading state
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter(); // Initialize router
 
   // Fetch portfolio data from Supabase
   const fetchPortfolioData = async () => {
     try {
       const { data, error } = await supabase
         .from("post") // Your table name
-        .select("id, title, description, image_url, created_at");
+        .select("id, title, image_url, created_at");
 
       if (error) throw error;
 
@@ -42,6 +45,32 @@ const PortfolioSection: React.FC = () => {
       setError("Failed to load portfolio data.");
       setLoading(false);
     }
+  };
+
+  // Upload portfolio item
+  const uploadPortfolioItem = async () => {
+    setUploading(true); // Set uploading state to true
+
+    // Logic to handle uploading a new portfolio item
+    const { error } = await supabase
+      .from("post")
+      .insert([
+        // Add the new post data here
+        { title: "New Blog Title", description: "New Blog Description", image_url: "image-url-here" }
+      ]);
+
+    if (error) {
+      console.error("Error uploading portfolio item:", error);
+      alert("Failed to upload post.");
+      setUploading(false); // Reset uploading state
+      return;
+    }
+
+    // Redirect to the blog page after a short delay
+    setTimeout(() => {
+      setUploading(false); // Reset uploading state before redirect
+      router.push("/blog");
+    }, 1000); // Redirect after 1 second
   };
 
   // Delete portfolio item
@@ -72,6 +101,12 @@ const PortfolioSection: React.FC = () => {
 
   return (
     <section className="flex flex-col px-20 mt-20 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
+      {/* Loading Overlay */}
+      {uploading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="border-8 border-t-8 border-white border-opacity-30 rounded-full w-16 h-16 animate-spin"></div>
+        </div>
+      )}
       <div className="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full">
         <h2 className="my-auto text-4xl font-semibold leading-none text-zinc-800">
           Portfolio
@@ -87,10 +122,10 @@ const PortfolioSection: React.FC = () => {
             />
           </div>
           <div className="flex flex-auto gap-5 max-md:max-w-full">
-            <button className="px-7 py-3 text-gray-500 whitespace-nowrap border border-gray-500 border-solid rounded-[136px] max-md:px-5">
-              Search
-            </button>
-            <button className="px-11 py-3 text-white capitalize bg-blue-400 rounded-[136px] max-md:px-5">
+            <button
+              onClick={uploadPortfolioItem}
+              className="px-11 py-3 text-white capitalize bg-blue-400 rounded-[136px]"
+            >
               Upload portfolio +
             </button>
           </div>
@@ -102,10 +137,6 @@ const PortfolioSection: React.FC = () => {
             <div>Sr.No</div>
             <div>Thumbnail</div>
             <div>Description</div>
-          </div>
-          <div className="flex gap-10">
-            <div>Date</div>
-            <div>Type</div>
           </div>
         </div>
 
