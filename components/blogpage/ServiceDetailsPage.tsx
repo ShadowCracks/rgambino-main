@@ -75,7 +75,6 @@ const ServiceDetailsPage: React.FC = () => {
         title="Interior Detailing"
         description="Efficitur dis in diam posuere nisi. Efficitur dictumst litora facilisis feugiat sed quisque tellus pede. Cubilia luctus lacus metus diam dolor mus lorem. Ligula nibh rutrum faucibus mollis sem sed blandit. Euismod egestas pede adipiscing arcu nibh dui imperdiet. Ridiculus ligula scelerisque tortor accumsan per pellentesque tempus cras venenatis. Tortor pharetra conubia purus pretium duis primis vivamus scelerisque."
         imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/7761b77f86050e4de343c7d224de1af4b93bf21fee94b593ee50d0350a61d727?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
-        features={features}
       />
       <ReviewSection reviews={reviews} />
       <WhatWeAreDoing
