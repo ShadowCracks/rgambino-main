@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type PackageCardProps = {
   title: string;
@@ -33,13 +34,13 @@ const PackageCard: React.FC<PackageCardProps> = ({
         ))}
       </ul>
       <p className="mt-4 opacity-75">{price}</p>
-      <a
+      <Link
         href="/Booking" // Redirects to the booking page
         className="px-8 py-2.5 mt-12 max-w-full font-bold text-white bg-blue-400 rounded-[100px] w-[482px] max-md:px-5 max-md:mt-10 hover:bg-blue-500 transition-colors text-center"
         aria-label="Book This Plan"
       >
         Book This Plan
-      </a>
+      </Link>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface WhoWeAreProps {}
 
@@ -37,13 +38,13 @@ const WhoWeAre: React.FC<WhoWeAreProps> = () => {
           <p className="mt-4 text-lg text-zinc-500 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur. Tellus sit volutpat maecenas ut. Vestibulum egestas in donec cras.
           </p>
-          <a
+          <Link
             href="/Booking" // Redirects to the booking page
             className="mt-8 px-8 py-3 text-lg font-semibold text-white bg-blue-400 rounded-full hover:bg-blue-500 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
             aria-label="Book Appointment"
           >
             Book Appointment
-          </a>
+          </Link>
         </div>
       </div>
     </main>
