@@ -26,7 +26,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
             <span className="self-stretch my-auto opacity-75">{feature}</span>
             <img
               loading="lazy"
-              src="https://i.imgur.com/20Y2uRC.png"
+              src="/images/Vector.png"
               alt=""
               className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
             />

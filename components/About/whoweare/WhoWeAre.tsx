@@ -10,7 +10,7 @@ const WhoWeAre: React.FC<WhoWeAreProps> = () => {
       <div className="absolute inset-0 top-0 z-[-1] w-full h-full">
         {/* Background Image */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/63f1d9eda55fb9e2cd5c6df3e0bc3b5773241be22daded90fc685cc361f0f568?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+          src="/images/webout.png"
           alt="About Us"
           className="w-full h-full object-cover"
         />

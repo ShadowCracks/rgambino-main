@@ -21,7 +21,7 @@ const CallToAction: React.FC = () => {
         <div className="flex flex-col ml-5 w-[44%] max-md:ml-0 max-md:w-full">
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/417d6623b42e414ad74ebb372a14c41b7438ffb40a9175464bf35be22ea3aa60?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+            src="images/istockphoto-1150931120-612x612cx 1.png"
             alt="Clean car"
             className="object-contain grow w-full aspect-[1.67] max-md:max-w-full"
           />
