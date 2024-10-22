@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_cdz4bl6", // Replace with your Service ID
+        "template_newsletter", // Replace with your Template ID
+        { email: email },
+        "JIT7wDfN9lboVIXNK" // Replace with your Public Key
+      )
+      .then(
+        (response) => {
+          setMessage("Subscription successful!");
+          setEmail("");
+        },
+        (err) => {
+          setMessage("Subscription failed. Please try again.");
+        }
+      );
+  };
+
   return (
     <footer className="flex flex-col px-20 py-14 mt-0 w-full text-base text-white bg-blue-400 max-md:px-5 max-md:mt-0 max-md:max-w-full">
       <div className="flex flex-wrap gap-10 justify-between items-start w-full max-md:max-w-full">
@@ -13,19 +38,19 @@ const Footer: React.FC = () => {
               <h3 className="font-bold">Company</h3>
               <ul className="flex flex-col mt-6">
                 <li className="opacity-75">
-                  <a href="#about">About Us</a>
+                  <a href="AboutUs">About Us</a>
                 </li>
                 <li className="mt-2 opacity-75">
-                  <a href="#services">Our Services</a>
+                  <a href="Services">Our Services</a>
                 </li>
                 <li className="mt-2 opacity-75">
-                  <a href="#pricing">Pricing Plan</a>
+                  <a href="Pricing">Pricing Plan</a>
                 </li>
                 <li className="mt-2 opacity-75">
-                  <a href="#careers">Work with Us</a>
+                  <a href="ContactUs">Work with Us</a>
                 </li>
                 <li className="mt-2 opacity-75">
-                  <a href="#blog">Automotive Blog</a>
+                  <a href="Blog">Automotive Blog</a>
                 </li>
               </ul>
             </nav>
@@ -52,11 +77,9 @@ const Footer: React.FC = () => {
             <nav className="flex flex-col">
               <h3 className="font-bold">Contact</h3>
               <ul className="flex flex-col mt-6">
-                <li className="opacity-75">Phone Number</li>
-                <li className="mt-2 opacity-75">Email Address</li>
-                <li className="mt-2 opacity-75">Our Locations</li>
-                <li className="mt-2 opacity-75">Social Media</li>
-                <li className="mt-2 opacity-75">Message Form</li>
+                <li className="mt-2 opacity-75">
+                  <a href="https://www.instagram.com/the_galactic_shine?igsh=MTQwbnA3bjA3YzE2ZQ==">Instagram</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -67,7 +90,10 @@ const Footer: React.FC = () => {
                 Subscribe to get monthly promo updates.
               </p>
             </div>
-            <form className="flex gap-10 items-start pb-4 mt-24 border-b border-solid border-b-white max-md:mt-10">
+            <form
+              className="flex gap-10 items-start pb-4 mt-24 border-b border-solid border-b-white max-md:mt-10"
+              onSubmit={handleNewsletterSubmit}
+            >
               <label htmlFor="email" className="sr-only">
                 Email Address
               </label>
@@ -75,12 +101,16 @@ const Footer: React.FC = () => {
                 type="email"
                 id="email"
                 placeholder="Email Address ..."
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="opacity-50 bg-transparent border-none"
               />
               <button type="submit" className="font-bold text-right">
                 Subscribe
               </button>
             </form>
+            {message && <p className="mt-2">{message}</p>}
           </div>
         </div>
       </div>

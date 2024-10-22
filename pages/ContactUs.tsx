@@ -1,15 +1,13 @@
 import React from 'react'
-import Header from '../components/Header'
 import ContactForm from '../components/ContactUs/ContactForm/ContactForm'
-import Footer from '../components/Footer'
+import Layout from '../components/About/Layout';
 
 function ContactUs() {
-  const navItems = ['Home', 'About Us', 'Services', 'Pricing','Blog'];
   return (
     <div>
-      <Header navItems={navItems}/>
+      <Layout>
       <ContactForm />
-      <Footer />
+      </Layout>
     </div>
   )
 }

@@ -1,12 +1,9 @@
-
 import React from 'react';
-import Header from '../Header';
 import PackageSection from './PackageSection';
 import AddonSection from './AddonSection';
-import Footer from './Footer';
+import Layout from '../About/Layout';
 
 const PricingPage: React.FC = () => {
-  const navItems = ['Home','AboutUs', 'Services', 'Pricing', 'Blog'];
   
   const exteriorPackages = [
     {
@@ -92,7 +89,7 @@ const PricingPage: React.FC = () => {
 
   return (
     <div className="flex flex-col bg-white">
-      <Header navItems={navItems} />
+      <Layout>
       <main>
         <PackageSection title="Exterior Detailing" packages={exteriorPackages} />
         <PackageSection title="Interior Detailing" packages={interiorPackages} />
@@ -103,7 +100,7 @@ const PricingPage: React.FC = () => {
         <PackageSection title="Full Detailing" packages={fullDetailingPackages} />
         <AddonSection addons={addons} />
       </main>
-      <Footer />
+      </Layout>
     </div>
   );
 };

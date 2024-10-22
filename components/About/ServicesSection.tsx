@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"; // Import Link component from Next.js
 
 const ServicesSection: React.FC = () => {
   return (
@@ -27,12 +28,18 @@ const ServicesSection: React.FC = () => {
               </ul>
             </div>
             <div className="flex gap-4 mt-6 w-full text-base text-white max-md:mt-8">
-              <button className="self-stretch px-6 py-2 bg-blue-400 rounded-[100px] max-md:px-5">
-                See More
-              </button>
-              <button className="self-stretch px-6 py-2 border border-blue-400 border-solid rounded-[100px] max-md:px-5">
-                Contact Us
-              </button>
+              {/* Use Link for See More button */}
+              <Link href="/blog">
+                <button className="self-stretch px-6 py-2 bg-blue-400 rounded-[100px] max-md:px-5">
+                  See More
+                </button>
+              </Link>
+              {/* Use Link for Contact Us button */}
+              <Link href="/ContactUs">
+                <button className="self-stretch px-6 py-2 border border-blue-400 border-solid rounded-[100px] max-md:px-5">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
