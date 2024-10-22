@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 
-const AboutUs: React.FC = () => {
+const Blog: React.FC = () => {
   return (
     <main className="flex relative flex-col items-center pb-10 w-full min-h-[491px] max-md:min-h-[150px] max-md:pb-5 max-md:max-w-full">
 
@@ -20,5 +20,4 @@ const AboutUs: React.FC = () => {
   );
 };
 
-export default AboutUs;
-
+export default Blog;

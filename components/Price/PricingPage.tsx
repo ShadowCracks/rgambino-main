@@ -2,6 +2,7 @@ import React from 'react';
 import PackageSection from './PackageSection';
 import AddonSection from './AddonSection';
 import Layout from '../About/Layout';
+//import Services from '../blog/blogpage/Services';
 
 const PricingPage: React.FC = () => {
   

@@ -8,7 +8,7 @@ const Blog: React.FC = () => {
       <div className="relative w-full max-h-[600px]">
         <img
           loading="lazy"
-          src="https://i.imgur.com/s7aS6g2.png"
+          src="images/about.png"
           alt="Background image"
           className="object-cover absolute inset-0 w-full max-h-[700px] h-auto"
         />
