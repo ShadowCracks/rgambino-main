@@ -1,5 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
+import GalacticHeader from "./GalacticHeader"; // Make sure to import the header
 
 const Hero: React.FC = () => {
   return (
@@ -10,6 +11,9 @@ const Hero: React.FC = () => {
             <div className="flex z-10 flex-col mt-28 mr-0 w-full max-md:mt-10 max-md:max-w-full">
               <div className="flex flex-col w-full max-md:mr-2 max-md:max-w-full max-custom:items-center">
                 <div className="flex flex-col max-w-full w-[527px] max-custom:items-center">
+                  {/* Add GalacticHeader here, before the existing h1 */}
+                  <GalacticHeader />
+                  {/* You can remove or keep this h1 depending on your preference */}
                   <h1 className="text-7xl font-semibold tracking-tighter leading-[80px] text-neutral-700 max-md:max-w-full max-md:text-4xl max-md:leading-[49px] max-custom:text-center">
                     Ultimate Care <br /> for Your Car
                   </h1>
@@ -65,13 +69,12 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div className="flex flex-col ml-5 md:ml-0 w-[61%] max-md:w-full max-custom:w-full max-custom:items-center">
-          <img
-          loading="lazy"
-          src="/images/silver-sport-car-with-driver-highway 1.png"
-          alt="Car being cleaned"
-          className="object-cover w-full max-custom:w-full max-md:max-w-full animate-slide-in"
-        />
-
+            <img
+              loading="lazy"
+              src="/images/silver-sport-car-with-driver-highway 1.png"
+              alt="Car being cleaned"
+              className="object-cover w-full max-custom:w-full max-md:max-w-full animate-slide-in"
+            />
           </div>
         </div>
       </div>
