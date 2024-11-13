@@ -2,7 +2,6 @@ import React from 'react';
 import PackageSection from './PackageSection';
 import AddonSection from './AddonSection';
 import Layout from '../About/Layout';
-//import Services from '../blog/blogpage/Services';
 
 const PricingPage: React.FC = () => {
   
@@ -11,27 +10,43 @@ const PricingPage: React.FC = () => {
       title: 'Standard Package (Est. Time: 1.5 Hrs)',
       features: [
         'Bug & Tar Removal',
-        'Foam Bath w/ Scratch-Free Hand Wash',
+        'FoamBath Scratch- Wash',
         'Clean Windows & Mirrors',
         'Hand dry with microfiber towels!',
-        'Tire & Rims Deep Cleaned and Detailed',
-        'Apply spray sealant (2-month protection)'
+        'Tire & Rims Deep Cleaned',
+        'Apply spray sealant (2-month protection)',
       ],
       price: 'Cars: $99, Small SUVs & Trucks: $125, Large SUVs & Trucks: $175'
     },
     {
-      title: 'Deluxe Package (Est. Time : 2.5 Hrs)',
+      title: 'Deluxe Package (Est. Time: 2.5 Hrs)',
       features: [
         'Standard Package',
         'Foam Bath w/ Scratch-Free Hand Wash',
         'Light Vacuum of Interior and Trunk',
         'Rim polishing',
         'Metal/aluminum polishing',
-        'Clay Bar Treatment'
+        'Clay Bar Treatment',
+        '', '', ''  // Added empty strings to match height
       ],
       price: 'Cars: $150, Mid-Size SUVs & Trucks: $250, Full-Size SUVs & Trucks: $300'
+    },
+    {
+      title: 'Galactic Exterior Package (Est. Time: 2.5 Hrs)',
+      features: [
+        'Hand Wash w/ Foam Bath & Hand Dry',
+        'Clean Door Jams',
+        'Bug & Tar Removal',
+        'Exterior Windows & Mirrors Cleaned',
+        'Tire & Rims Deep Cleaned and Detailed',
+        'Metal/aluminum polishing',
+        'Vinyl-Rubber-Plastic (VRP) Treatment',
+        'Clay Bar / Iron Decontamination',
+        'Spray Wax'
+      ],
+      price: 'Coupe/Sedan: $200, Mid-Size SUVs & Trucks: $250, Large-Size SUVs & Trucks: $300',
+      note: '*** Additional Services may be added for Additional Fees***'
     }
-
   ];
 
   const interiorPackages = [
@@ -42,7 +57,8 @@ const PricingPage: React.FC = () => {
         'Interior Windows & Mirrors Cleaned',
         'Clean plastic/vinyl surface',
         'Detail Door Jambs',
-        'Air Freshener Treatment'
+        'Air Freshener Treatment',
+        '', '', ''  // Added empty strings to match height
       ],
       price: 'Cars: $99, Mid-Size SUVs & Trucks: $200, Full-Size SUVs & Trucks: $250'
     },
@@ -55,7 +71,8 @@ const PricingPage: React.FC = () => {
         'Steam clean, disinfect & condition all interior plastics',
         'Metal/aluminum polishing',
         'Clay Bar Treatment',
-        'Interior Shampoo, Stain Extraction, & Deep Upholstery Cleaning'
+        'Interior Shampoo, Stain Extraction, & Deep Upholstery Cleaning',
+        ''
       ],
       price: 'Cars: $225, Mid-Size SUVs & Trucks: $275, Full-Size SUVs & Trucks: $350'
     }
@@ -67,7 +84,8 @@ const PricingPage: React.FC = () => {
       features: [
         'Exterior Standard Package',
         'Interior Standard Package',
-        '3 Month Ceramic Wax!'
+        '3 Month Ceramic Wax!',
+        '', ''  // Added empty strings to match height
       ],
       price: 'Cars: $175, Mid-Size SUVs & Trucks: $250, Full-Size SUVs & Trucks: $350'
     },
@@ -77,7 +95,8 @@ const PricingPage: React.FC = () => {
         'Exterior Deluxe Package',
         'Interior Deluxe Package',
         'Engine Bay Cleaning',
-        '6 Month Paint Sealant'
+        '6 Month Paint Sealant',
+        ''  // Added empty string to match height
       ],
       price: 'Cars: $275, Mid-Size SUVs & Trucks: $350, Full-Size SUVs & Trucks: $450'
     }
