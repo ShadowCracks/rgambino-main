@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
         >
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c4bc369c732b4bf6c2901ab1bca691d6d2e06d1de98a4dfca45c66314e542b8?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+            src="/images/logo.png"
             alt="Company logo"
             className="object-contain shrink-0 w-[71px] h-auto" // Use h-auto for responsive height
           />
