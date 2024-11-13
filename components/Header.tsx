@@ -24,12 +24,12 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
           {navItems.map((item, index) => (
             <a key={index} href={item.replace(/\s+/g, '')}>{item}</a>
           ))}
-          <a
+          <Link
             href="/ContactUs"
             className="self-stretch px-8 py-2.5 text-blue-400 border border-blue-400 border-solid rounded-[100px]"
           >
             Contact Us
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
